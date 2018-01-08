@@ -183,6 +183,17 @@
             authenticate: true
         };
 
+        var notebook_list = {
+            name: "web.notebook-main.notebook_list",
+            parent: "web.notebook-main",
+            url: "/notebooklist",
+            templateUrl: baseUrl + "/web/notebook/notebook_list.html",
+            controller: 'NotebookListCtrl',
+            controllerAs: 'notebookList',
+            title: 'My Notebooks',
+            authenticate: true
+        };
+
         var challenge_page = {
             name: "web.challenge-main.challenge-page",
             parent: "web.challenge-main",
@@ -216,6 +227,14 @@
             url: "/phases",
             templateUrl: baseUrl + "/web/challenge/phases.html",
             title: 'Phases',
+            authenticate: true
+        };
+
+        var notebooks = {
+            name: "web.challenge-main.challenge-page.notebooks",
+            url: "/notebooks",
+            templateUrl: baseUrl + "/web/challenge/notebooks.html",
+            title: 'Notebooks',
             authenticate: true
         };
 
@@ -453,6 +472,8 @@
         $stateProvider.state(challenge_page);
         $stateProvider.state(overview);
         $stateProvider.state(evaluation);
+        $stateProvider.state(notebook_list);
+        $stateProvider.state(notebooks);
         $stateProvider.state(phases);
         $stateProvider.state(participate);
         $stateProvider.state(submission);

@@ -51,6 +51,7 @@ OUR_APPS = [
     'challenges',
     'hosts',
     'jobs',
+    'notebooks',
     'participants',
     'web',
 ]
